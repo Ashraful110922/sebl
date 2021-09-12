@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/et_margin5"
+        android:paddingLeft="@dimen/et_margin5"
+        android:paddingRight="@dimen/et_margin5">
+
+        <TextView
+            android:id="@+id/btnDrReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/et_margin5"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center"
+            android:padding="@dimen/et_margin10"
+            android:text="SHOW REPORT"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size14" />
+
+
+        <LinearLayout
+            android:id="@+id/viewDrZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ZONE: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDrZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDrDpo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDrZone"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEPOT: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDrDpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDrRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDrDpo"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REGION: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDrRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDrArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/viewDrRegion"
+            android:layout_marginTop="@dimen/et_margin5">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AREA: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDrArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDrTerritory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/viewDrArea"
+            android:layout_marginTop="@dimen/et_margin5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TERRITORY: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/spDrTerritory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/viewDrMarket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/viewDrTerritory"
+            android:layout_marginTop="@dimen/et_margin5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MARKET: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:layout_weight="3"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDrMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/et_margin5"
+                    android:layout_marginRight="@dimen/et_margin5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/viewDoctorChemist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDrMarket"
+            android:layout_marginTop="@dimen/et_margin5">
+            <LinearLayout
+                android:id="@+id/viewDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Doctor: "
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size14"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_border"
+                    android:minHeight="?attr/actionBarSize"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/et_margin5"
+                        android:layout_marginRight="@dimen/et_margin5"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/et_margin10"
+                        android:contentDescription="@null"
+                        android:src="@drawable/down_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewChemist"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_b_border_select">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CHEMIST: "
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnChem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/et_margin5"
+                    android:layout_weight="3"
+                    android:drawableRight="@drawable/down_icon"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/view_margin14"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:text="Select chemist"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size16" />
+
+
+                <!--<RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_border"
+                    android:minHeight="?attr/actionBarSize"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spChemist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/et_margin5"
+                        android:layout_marginRight="@dimen/et_margin5"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/et_margin10"
+                        android:contentDescription="@null"
+                        android:src="@drawable/down_icon" />
+                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDoctorChemist"
+            android:layout_marginTop="@dimen/et_margin10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ddDrPick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/date_icon"
+                android:drawablePadding="@dimen/et_margin5"
+                android:gravity="center_vertical"
+                android:padding="@dimen/et_margin5"
+                android:text="Set Date"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size16" />
+
+            <TextView
+                android:id="@+id/ttDrPicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/date_icon"
+                android:drawablePadding="@dimen/et_margin5"
+                android:gravity="center_vertical"
+                android:padding="@dimen/et_margin5"
+                android:text="Set ToDate"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/drReportNoFound"
+        layout="@layout/notfound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pbDrReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible" />
+
+</RelativeLayout>

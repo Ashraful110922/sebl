@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:drawableLeft="@drawable/app_sign"
+            android:fontFamily="monospace"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/et_margin10"
+            android:shadowColor="@color/primary"
+            android:shadowDx="12"
+            android:shadowDy="12"
+            android:shadowRadius="8"
+            android:text="TRS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/btnTarget"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toStartOf="@id/btnCompletedVisit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/schedule_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/target_visit"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btnCompletedVisit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTarget"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/execute_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/completed_visit"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnDoctorVisit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toStartOf="@id/btnCompletedVisit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnTarget">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/dr_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/doctor_visit"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnChemistVisit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTarget"
+                app:layout_constraintTop_toBottomOf="@id/btnCompletedVisit">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/chemist_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/report"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btnMarket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toStartOf="@id/btnChemistVisit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnDoctorVisit">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/market_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="Market List"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btnAttendance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding20"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding20"
+                app:layout_constraintDimensionRatio="H, 1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnDoctorVisit"
+                app:layout_constraintTop_toBottomOf="@id/btnChemistVisit">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/atten_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/in_out"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_color"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/dashSummary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_padding10"
+                android:background="@drawable/trending_background"
+                android:gravity="center"
+                android:padding="@dimen/padding20"
+                app:layout_constraintEnd_toEndOf="@id/btnChemistVisit"
+                app:layout_constraintStart_toStartOf="@id/btnTarget"
+                app:layout_constraintTop_toBottomOf="@id/btnMarket">
+
+
+
+                <TextView
+                    android:id="@+id/levelCollect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_collect"
+                    android:background="@drawable/background"
+                    android:padding="@dimen/et_padding10"
+                    android:textSize="@dimen/text_size14" />
+                <ImageButton
+                    android:id="@+id/btnCollect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundcorner"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/levelCollect"
+                    android:layout_alignBottom="@id/levelCollect"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/et_margin5"
+                    android:src="@drawable/bdtk_icon"
+                    android:layout_margin="@dimen/et_margin5" />
+
+
+                <TextView
+                    android:id="@+id/levelInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_invoice"
+                    android:layout_below="@+id/levelCollect"
+                    android:background="@drawable/background"
+                    android:padding="@dimen/et_padding10"
+                    android:layout_marginTop="2dp"
+                    android:textSize="@dimen/text_size14" />
+                <ImageButton
+                    android:id="@+id/btnInvoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundcorner"
+                    android:layout_alignRight="@id/levelInvoice"
+                    android:layout_alignTop="@id/levelInvoice"
+                    android:layout_alignBottom="@id/levelInvoice"
+                    android:contentDescription="@null"
+                    android:layout_below="@id/btnCollect"
+                    android:src="@drawable/bdtk_icon"
+                    android:padding="@dimen/et_margin5"
+                    android:layout_margin="@dimen/et_margin5" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/addDCView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/addChemist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/addDr"
+            android:layout_alignLeft="@id/addDr"
+            android:layout_alignRight="@id/addDr"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/et_margin5"
+            android:background="@drawable/trending_background"
+            android:drawableLeft="@drawable/chemist_icon"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/et_margin5"
+            android:paddingTop="@dimen/et_margin10"
+            android:paddingBottom="@dimen/et_margin10"
+            android:text="ADD CHEMIST"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addDr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/addDoctor"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/et_margin5"
+            android:background="@drawable/trending_background"
+            android:drawableLeft="@drawable/dr_icon"
+            android:drawablePadding="@dimen/et_margin10"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/padding20"
+            android:paddingTop="@dimen/et_margin10"
+            android:paddingRight="@dimen/padding20"
+            android:paddingBottom="@dimen/et_margin10"
+            android:text="ADD DOCTOR"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size14"
+            android:textStyle="bold" />
+
+        <helper.MovableFloatingActionButton
+            android:id="@+id/addDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/et_margin5"
+            android:background="@null"
+            android:elevation="0dp"
+            android:src="@drawable/fl_bg"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/et_bg" />
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pbHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

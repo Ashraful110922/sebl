@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/et_padding10"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/btnEditDr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/et_margin5"
+            android:paddingRight="@dimen/et_margin5"
+            android:text="Edit"
+            android:textColor="@android:color/white"
+            android:background="@drawable/toolbar_bg"
+            android:textStyle="bold"
+            android:textSize="@dimen/text14"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/drName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_toLeftOf="@id/btnEditDr"
+            android:textSize="@dimen/text14" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/drAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text14" />
+    <TextView
+        android:id="@+id/drId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text14" />
+
+</LinearLayout>
+

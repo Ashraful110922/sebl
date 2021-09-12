@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar" />
+    <TextView
+        android:id="@+id/btnNewMkt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/et_margin10"
+        android:layout_marginRight="@dimen/et_margin10"
+        android:layout_marginBottom="@dimen/et_margin5"
+        android:background="@drawable/toolbar_bg"
+        android:gravity="center"
+        android:padding="@dimen/et_margin10"
+        android:text="ADD MARKET"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size14"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recMkt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnNewMkt"
+        android:paddingLeft="@dimen/et_margin5"
+        android:paddingRight="@dimen/et_margin5"
+        android:orientation="vertical" />
+    <include
+        android:id="@+id/mktNoFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnNewDoctor"
+        layout="@layout/notfound"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/pbMkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible">
+    </ProgressBar>
+</RelativeLayout>

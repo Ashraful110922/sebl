@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/report"
+        android:orderInCategory="0"
+        android:title="REPORT"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuEmp"
+                android:title="EMPLOYEE" />
+            <item
+                android:id="@+id/menuMioVisit"
+                android:title="MIO" />
+            <item
+                android:id="@+id/menuDoctorVisit"
+                android:title="DOCTOR" />
+            <item
+                android:id="@+id/menuChemistVisit"
+                android:title="CHEMIST" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/list"
+        android:orderInCategory="1"
+        android:title="LIST"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/nav_left_1"
+                android:icon="@drawable/role_icon"
+                android:title="DOCTOR" />
+
+            <item
+                android:id="@+id/nav_left_2"
+                android:icon="@drawable/umgt_icon"
+                android:title="CHEMIST" />
+
+            <item
+                android:id="@+id/nav_market"
+                android:icon="@drawable/role_icon"
+                android:title="MARKET" />
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/mapRoad"
+        android:orderInCategory="2"
+        android:title="TRACKING"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuCLocation"
+                android:title="CURRENT LOCATION" />
+            <item
+                android:id="@+id/menuRoad"
+                android:title="ROAD MAP" />
+
+        </menu>
+    </item>
+
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single"
+        android:orderInCategory="3">
+        <item
+            android:id="@+id/nav_left_3"
+            android:icon="@android:drawable/ic_lock_idle_lock"
+            android:title="CHANGE PASSWORD"
+            android:visible="true" />
+    </group>
+
+
+    <group
+        android:id="@+id/groupTrack"
+        android:checkableBehavior="single"
+        android:orderInCategory="4">
+        <item
+            android:id="@+id/nav_leftTrack"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="CHECK IN/OUT"
+            android:visible="false" />
+    </group>
+
+
+</menu>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/profileView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg">
+
+        <ImageView
+            android:id="@+id/picUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_sign" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/et_padding"
+            android:layout_toRightOf="@id/picUser"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postingPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/profileView"
+        android:background="@android:color/darker_gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/reportView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewProfile">
+
+        <ImageView
+            android:id="@+id/reportArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/et_margin10"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/right_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/reportArrow"
+            android:drawableLeft="@drawable/report_icon"
+            android:drawablePadding="@dimen/et_margin10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin10"
+            android:text="@string/rpt"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size16"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewReport"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/reportView"
+        android:background="@android:color/darker_gray" />
+
+    <ListView
+        android:id="@+id/lvReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewReport"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewLvReport"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/lvReport"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/listMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLvReport">
+
+        <ImageView
+            android:id="@+id/listArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/et_margin10"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/right_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/listArrow"
+            android:drawableLeft="@drawable/list_icon"
+            android:drawablePadding="@dimen/et_margin10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin10"
+            android:text="@string/list"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size16"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/listMenu"
+        android:background="@android:color/darker_gray" />
+
+    <ListView
+        android:id="@+id/lvList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewMenu"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewLvList"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/lvList"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/trackingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLvList">
+
+        <ImageView
+            android:id="@+id/trackingArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/et_margin10"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/right_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/trackingArrow"
+            android:drawableLeft="@drawable/tracking_icon"
+            android:drawablePadding="@dimen/et_margin10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin10"
+            android:text="@string/tracking"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size16"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewTracking"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/trackingView"
+        android:background="@android:color/darker_gray" />
+
+    <ListView
+        android:id="@+id/lvTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTracking"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewLvTracking"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/lvTracking"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/vieChangePass"
+        android:layout_width="match_parent"
+        android:layout_below="@id/viewLvTracking"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/pc_icon"
+            android:drawablePadding="@dimen/et_margin10"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin10"
+            android:text="@string/cng_password"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size16"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="bottom"
+       android:layout_alignParentBottom="true">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:orientation="horizontal">
+           <TextView
+               android:id="@+id/tvPower"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Power by "
+               android:textColor="@android:color/black"
+               android:gravity="center"
+               android:textStyle="bold"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="OneICT"
+               android:textColor="@android:color/black"
+               android:drawableLeft="@drawable/one_logo"
+               android:drawablePadding="@dimen/et_margin10"
+               android:gravity="center"
+               android:textStyle="bold"/>
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/supporterInfo"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/divider"
+           android:gravity="center"/>
+
+   </LinearLayout>
+
+
+
+
+</RelativeLayout>

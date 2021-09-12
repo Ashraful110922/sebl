@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapContenView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000">
+    <TextView
+        android:id="@+id/btnLoc"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="Set Location"
+        android:layout_marginLeft="@dimen/et_margin10"
+        android:layout_marginRight="@dimen/et_margin10"
+        android:layout_marginBottom="@dimen/et_margin5"
+        android:background="@drawable/toolbar_bg"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size14"
+        android:textStyle="bold" />
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLoc" />
+
+    <ProgressBar
+        android:id="@+id/pbLocation"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progressBackgroundTintMode="src_over"
+        android:visibility="gone" />
+</RelativeLayout>

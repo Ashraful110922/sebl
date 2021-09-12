@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/et_margin5"
+        android:paddingLeft="@dimen/et_margin5"
+        android:paddingRight="@dimen/et_margin5">
+
+        <TextView
+            android:id="@+id/btnCurLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/et_margin5"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center"
+            android:padding="@dimen/et_margin10"
+            android:text="SHOW CURRENT LOCATION"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size14" />
+
+        <TextView
+            android:id="@+id/btnRoadMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/et_margin5"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center"
+            android:padding="@dimen/et_margin10"
+            android:text="SHOW ROAD MAP"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size14" />
+
+        <LinearLayout
+            android:id="@+id/btnViewMio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/et_margin5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnDrRptShow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_bg"
+                android:gravity="center"
+                android:padding="@dimen/et_margin10"
+                android:text="DOCTOR REPORT"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/btnCheRptShow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/et_margin10"
+                android:layout_weight="1"
+                android:background="@drawable/toolbar_bg"
+                android:gravity="center"
+                android:padding="@dimen/et_margin10"
+                android:text="CHEMIST REPORT"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size14" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/viewZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ZONE: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDpo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewZone"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEPOT: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spDpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewDpo"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REGION: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewRegion"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AREA: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewTerritory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewArea"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TERRITORY: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spTerritory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewMio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewTerritory"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MIO: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spMio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/dateMioPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewMio"
+            android:layout_marginTop="@dimen/et_margin10"
+            android:drawableLeft="@drawable/date_icon"
+            android:drawablePadding="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin5"
+            android:text="Set Date"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size16" />
+
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/listReportNoFound"
+        layout="@layout/notfound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pbListReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible" />
+
+</RelativeLayout>

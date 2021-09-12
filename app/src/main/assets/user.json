@@ -1,0 +1,107 @@
+{
+    "roles": [
+      {
+        "id": 1,
+        "name": "Admin"
+      },
+      {
+        "id": 2,
+        "name": "Super Admin"
+      },
+      {
+        "id": 3,
+        "name": "Super Admin2"
+      },
+      {
+        "id": 4,
+        "name": "Super Admin3"
+      }
+    ],
+    "designations": [
+      {
+        "id": 1,
+        "name": "GM"
+      },
+      {
+        "id": 2,
+        "name": "Officer"
+      },
+      {
+        "id": 3,
+        "name": "Officer2"
+      },
+      {
+        "id": 4,
+        "name": "Officer3"
+      },
+      {
+        "id": 5,
+        "name": "Officer3"
+      },
+      {
+        "id": 6,
+        "name": "Officer3"
+      },
+      {
+        "id": 7,
+        "name": "Officer3"
+      },
+      {
+        "id": 8,
+        "name": "Officer3"
+      },
+      {
+        "id": 9,
+        "name": "Officer3"
+      }
+    ],
+    "departments": [
+      {
+        "id": 1,
+        "name": "Marketing"
+      },
+      {
+        "id": 2,
+        "name": "Software"
+      },
+      {
+        "id": 3,
+        "name": "IT"
+      }
+    ],
+    "supervisors": [
+      {
+        "id": 1,
+        "name": "user1",
+        "department_id": 1,
+        "designation_id": 1,
+        "location_area_id": 1,
+        "department": {
+          "id": 1,
+          "name": "Marketing"
+        },
+        "designation": {
+          "id": 1,
+          "name": "GM"
+        },
+        "location_area": {
+          "id": 1,
+          "name": "One Pharma HQ",
+          "location_level_id": 1
+        }
+      }
+    ],
+    "levels": [
+      {
+        "id": 1,
+        "name": "HQ",
+        "loclist": [
+          {
+            "id": 1,
+            "name": "One Pharma HQ"
+          }
+        ]
+      }
+    ]
+
+}

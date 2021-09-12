@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+    <include
+        layout="@layout/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recRptMgt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnNewDoctor"
+        android:paddingLeft="@dimen/et_margin5"
+        android:paddingRight="@dimen/et_margin5"
+        android:orientation="vertical" />
+    <include
+        android:id="@+id/rptNoFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        layout="@layout/notfound"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/pbRptMgt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible">
+    </ProgressBar>
+</RelativeLayout>

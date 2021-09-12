@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/btnDoctorSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/et_margin10"
+        android:layout_marginRight="@dimen/et_margin10"
+        android:layout_marginBottom="@dimen/et_margin5"
+        android:background="@drawable/toolbar_bg"
+        android:gravity="center"
+        android:padding="@dimen/et_margin10"
+        android:text="@string/save_doctor"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size14"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnDoctorSubmit"
+        android:layout_below="@id/toolbar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/et_margin5"
+        android:padding="@dimen/et_margin5"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dcCodeView"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDoctorCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doctor_code"
+                android:inputType="number"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintDCName"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doctor_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconTint="@android:color/black"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/setLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select place"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/map_logo"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text_size14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewArea"
+            android:layout_marginTop="@dimen/et_margin5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MARKET: "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size14"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/spinner_border"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spMkt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/et_margin5"
+                    android:paddingRight="@dimen/et_margin5"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/et_margin10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/down_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDoctorAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doctor_write_add"
+                android:padding="10dp"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="3"
+                android:minLines="3"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/et_margin5"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ac_name"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textStyle="bold" />
+
+            <helper.ClearEditText
+                android:id="@+id/etDoctorAccount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/edittext_modified"
+                android:gravity="center"
+                android:hint="@string/ac_name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minLines="1"
+                android:padding="@dimen/et_margin5"
+                android:singleLine="true"
+                android:textColor="@color/primary_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDoctorMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobile_no"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/et_margin5"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/doctor_tel"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textStyle="bold" />
+
+            <helper.ClearEditText
+                android:id="@+id/etDoctorTel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/edittext_modified"
+                android:gravity="center"
+                android:hint="@string/doctor_tel"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minLines="1"
+                android:padding="@dimen/et_margin5"
+                android:singleLine="true"
+                android:textColor="@color/primary_text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintSpeciality"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDoctorSpeciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/doctor_speciality"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintInstitution"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDrInstitution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Institution"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintDesignation"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Designation"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintCertificate"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCertificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Certificate"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hintPatientNo"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/et_margin5"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/divider"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPatientNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of patient"
+            android:inputType="text"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/text14" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hintProprietor"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/et_margin5"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/divider"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProprietor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Proprietor name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/text14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/et_margin5"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/doctor_method"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/background"
+                android:padding="@dimen/et_margin5">
+                <utils.MySpinner
+                    android:id="@+id/spMethod"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/et_margin5"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/divider"
+                android:layout_marginTop="@dimen/et_margin5"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTypePay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/text14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/et_margin5">
+
+                <TextView
+                    android:id="@+id/tvTypePay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/acc_no"
+                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                    android:textStyle="bold" />
+                <helper.ClearEditText
+                    android:id="@+id/etTypePay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/edittext_modified"
+                    android:gravity="center"
+                    android:hint="@string/acc_no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:padding="@dimen/et_margin5"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/text_size16" />
+            </LinearLayout>-->
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/et_margin5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/amount"
+                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                    android:textStyle="bold" />
+
+                <helper.ClearEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/edittext_modified"
+                    android:gravity="center"
+                    android:hint="@string/amount"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:padding="@dimen/et_margin5"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/text_size16" />
+            </LinearLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/divider"
+                android:layout_marginTop="@dimen/et_margin5"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/acc_no"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/text14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/et_margin5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/yes_no"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:theme="@style/CheckBoxTheme" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbDNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible"/>
+</RelativeLayout>

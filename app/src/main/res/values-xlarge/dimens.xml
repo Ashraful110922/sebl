@@ -1,0 +1,42 @@
+<resources>
+    <!-- X-Large -->
+    <dimen name="size23">30sp</dimen>
+
+    <dimen name="tvBBar_height">5dp</dimen>
+    <dimen name="tvPower_padding">7dp</dimen>
+    <dimen name="tvOplSales_txSize">25sp</dimen>
+    <dimen name="tvOplSales_padding">30dp</dimen>
+ <!--   <dimen name="tv_size">20sp></dimen>-->
+    <dimen name="text_size16">20sp</dimen>
+    <dimen name="text_size14">18sp</dimen>
+    <dimen name="et_padding">10dp</dimen>
+    <dimen name="et_margin">14dp</dimen>
+    <dimen name="et_margin10">18dp</dimen>
+
+    <!-- Home-->
+    <dimen name="padding20">40dp</dimen>
+    <dimen name="padding40">80dp</dimen>
+    <dimen name="text60">70sp</dimen>
+    <dimen name="text30">40sp</dimen>
+    <dimen name="text14">18sp</dimen>
+    <dimen name="margin10">20dp</dimen>
+
+    <!-- user create-->
+    <dimen name="et_padding10">20dp</dimen>
+    <dimen name="et_padding12">24dp</dimen>
+    <dimen name="et_margin5">10dp</dimen>
+    <dimen name="et_size14">18sp</dimen>
+    <dimen name="view_margin14">26dp</dimen>
+    <dimen name="et_padding15">30dp</dimen>
+    <dimen name="txt_size20">30sp</dimen>
+    <dimen name="camera_wh">50dp</dimen>
+    <dimen name="txt_size12">16sp</dimen>
+    <dimen name="image_w">120dp</dimen>
+    <dimen name="image_h">140dp</dimen>
+    <dimen name="map_view300">600dp</dimen>
+    <dimen name="width_month">200dp</dimen>
+
+    <dimen name="width52">105dp</dimen>
+
+
+</resources>
